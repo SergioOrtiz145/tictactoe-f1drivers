@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import coil.load
-import com.example.taller1.data.network.FuelClient
+import com.example.taller1.data.network.VolleyClient
 import com.example.taller1.databinding.ActivityDriverF1Binding
 
 class DriverF1Activity : AppCompatActivity() {
@@ -27,11 +27,11 @@ class DriverF1Activity : AppCompatActivity() {
         binding.driverImage.load(intent.getStringExtra("headshot_url"))
         val code = intent.getStringExtra("country_code")
         if (code != null) {
-            FuelClient.getCountryFlag(code){flag ->
+            VolleyClient.getCountryFlag(this, code){flag ->
                 if(flag != null){
                     binding.driverFlag.load(flag)
                 }else
-                    Log.e("F1", "error al cargar bandera o no pais")
+                    Log.e("F1", "error al cargar bandera o no tiene pais")
 
             }
         }

@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.taller1.data.network.FuelClient
 import com.example.taller1.databinding.ActivityInicioBinding
 
 class InicioActivity : AppCompatActivity() {

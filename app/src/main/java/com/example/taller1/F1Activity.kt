@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.taller1.data.model.Driver
-import com.example.taller1.data.network.FuelClient
+import com.example.taller1.data.network.VolleyClient
 import com.example.taller1.databinding.ActivityF1Binding
 
 class F1Activity : AppCompatActivity() {
@@ -22,7 +22,7 @@ class F1Activity : AppCompatActivity() {
         getDrivers()
     }
     private fun getDrivers(){
-        FuelClient.getDrivers(9684){ drivers, error ->
+        VolleyClient.getDrivers(this,9684){ drivers, error ->
             runOnUiThread{
             if (error != null){
                 Log.e("F1", "Error: $error")
