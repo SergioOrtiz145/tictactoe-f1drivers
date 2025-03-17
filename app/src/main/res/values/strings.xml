@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Taller1</string>
+    <string name="driver_name">Name:</string>
+    <string name="Acronym">Acronym:</string>
+    <string name="team">Team:</string>
+    <string name="player_two_o">Player Two (O)</string>
+    <string name="new_game">New Game</string>
+    <string name="player_one_x">Player one (X)</string>
 </resources>
