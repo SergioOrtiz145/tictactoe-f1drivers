@@ -23,12 +23,10 @@ class F1Activity : AppCompatActivity() {
     }
     private fun getDrivers(){
         VolleyClient.getDrivers(this,9684){ drivers, error ->
-            runOnUiThread{
             if (error != null){
                 Log.e("F1", "Error: $error")
             } else {
                     if(drivers != null){
-                        drivers.forEach{driver -> Log.e("F1", "🏎️ ${driver.full_name} (${driver.driver_number}) - ${driver.headshot_url} - ${driver.team_colour} - ${driver.team_name} - ${driver.country_code}")}
                         driverList = drivers
                         val driversName = driverList.map{"${it.driver_number}. ${it.full_name}"}
                         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, driversName)
@@ -49,7 +47,7 @@ class F1Activity : AppCompatActivity() {
                         }
                 }
             }
-                }
+
         }
     }
 }
