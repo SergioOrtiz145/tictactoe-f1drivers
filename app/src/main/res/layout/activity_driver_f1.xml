@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
     tools:context=".DriverF1Activity">
 
 
@@ -13,11 +12,12 @@
         android:id="@+id/LinearLayout"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginBottom="300dp"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="150dp"
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/driverImage"
@@ -35,80 +35,83 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/LinearLayoutName"
-        android:layout_margin="50dp"
-        android:layout_width="409dp"
-        android:layout_height="47dp"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/LinearLayout">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/LinearLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="#128AE9"
-            android:text="Name:" />
+        <LinearLayout
+            android:id="@+id/LinearLayoutName"
+            android:layout_width="409dp"
+            android:layout_height="47dp"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/driverName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="5"
-            android:textSize="16sp"
-            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/driver_name"
+                android:textColor="#128AE9"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/driverName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="410dp"
+            android:layout_height="41dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/Acronym"
+                android:textColor="#128AE9"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/driverAcronym"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutTeam"
+            android:layout_width="409dp"
+            android:layout_height="44dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/team"
+                android:textColor="#128AE9"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/driverTeam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textSize="16sp" />
+        </LinearLayout>
+
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/LinearLayoutTeam"
-        android:layout_margin="50dp"
-        android:layout_width="409dp"
-        android:layout_height="44dp"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/LinearLayoutName">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="#128AE9"
-            android:text="Team:" />
-
-        <TextView
-            android:id="@+id/driverTeam"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="5"
-            android:textSize="16sp"
-             />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="410dp"
-        android:layout_height="41dp"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/LinearLayoutTeam"
-        android:layout_margin="50dp">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="#128AE9"
-            android:text="Acronym: " />
-
-        <TextView
-            android:id="@+id/driverAcronym"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="10"
-            android:textSize="16sp"
-            />
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
